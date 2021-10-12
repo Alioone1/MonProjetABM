@@ -1,0 +1,18 @@
+{% block title %}
+{
+    "liste": [
+        {% for etudiant in liste %}
+        {
+            "nom": "{{etudiant.nom}}",
+            "id": "{{ etudiant.identifiant }}"
+        }
+        {% if not loop.last %}, {% endif %}
+        {% endfor %}
+    ]
+}
+{% endblock %}
+
+{% block body %}
+
+{% endblock %}
+
